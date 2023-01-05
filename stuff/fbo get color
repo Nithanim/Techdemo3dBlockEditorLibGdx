@@ -1,0 +1,18 @@
+/*var texture = fbo.getColorBufferTexture();
+var textureData = texture.getTextureData();
+if (!textureData.isPrepared()) {
+textureData.prepare();
+}
+TextureRegion textureRegion = new TextureRegion(texture);
+textureRegion.flip(false, false);
+
+System.out.println(
+  "WF: "
+      + textureRegion.getRegionWidth()
+      + " | HF: "
+      + textureRegion.getRegionHeight());
+byte[] bytes =
+  ScreenUtils.getFrameBufferPixels(
+      screenX, textureRegion.getRegionHeight() - screenY, 1, 1, false);
+System.out.println(
+  (bytes[0] & 0xFF) + "| " + (bytes[1] & 0xFF) + " | " + (bytes[2] & 0xFF));
